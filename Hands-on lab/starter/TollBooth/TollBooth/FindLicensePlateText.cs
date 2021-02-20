@@ -42,10 +42,11 @@ namespace TollBooth
             var licensePlate = string.Empty;
             // Request parameters.
             const string requestParameters = "language=unk&detectOrientation=true";
+
             // Get the API URL and the API key from settings.
-            // TODO 2: Populate the below two variables with the correct AppSettings properties.
-            var uriBase = Environment.GetEnvironmentVariable("");
-            var apiKey = Environment.GetEnvironmentVariable("");
+            // Populate the below two variables with the correct AppSettings properties.
+            var uriBase = Environment.GetEnvironmentVariable("computerVisionApiUrl");
+            var apiKey = Environment.GetEnvironmentVariable("computerVisionApiKey");
 
             var resiliencyStrategy = DefineAndRetrieveResiliencyStrategy();
 
